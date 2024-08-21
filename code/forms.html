@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+  </head>
+  <body>
+    <form action="/tacos">
+      <p>
+        <label for="usernae">이름</label>
+        <input id="usernae" type="text" placeholder="이름입력" name="usernae" />
+      </p>
+      <p>
+        <label for="pw">비밀번호</label>
+        <input id="pw" type="password" placeholder="비번입력" name="pw" />
+      </p>
+      <p>
+        <label for="col">색</label>
+        <input id="col" type="color" name="col" />
+      </p>
+      <p>
+        <label for="num">번호</label>
+        <input
+          id="num"
+          type="number"
+          placeholder="번호입력"
+          name="num"
+          min="0"
+          max="1000"
+          step="5"
+        />
+      </p>
+      <p>
+        <label for="sound">소리</label>
+        <input id="num" type="range" name="range" min="0" max="10" value="5" />
+      </p>
+      <p>
+        <label for="ta">텍스트 영역</label>
+        <br />
+        <textarea
+          id="ta"
+          rows="10"
+          cols="40"
+          name="ta"
+          placeholder="글 입력"
+        ></textarea>
+      </p>
+      <p>
+        <label for="sele">과일 : </label>
+        <select name="sele" id="sele">
+          <option value="a">사과</option>
+          <option value="b">바나나</option>
+          <option value="g">포도</option>
+        </select>
+      </p>
+      <p>
+        <input type="checkbox" name="cb" id="agree" />
+        <label for="agree">동의</label>
+      </p>
+      <p>
+        <label for="s">S</label>
+        <input type="radio" id="s" name="size" value="s" />
+        <label for="m">M</label>
+        <input type="radio" id="m" name="size" value="m" />
+        <label for="l">L</label>
+        <input type="radio" id="l" name="size" value="l" />
+      </p>
+      <button type="submit">제출</button>
+    </form>
+    <hr />
+
+    <form action="/aa">
+      <p>
+        <label for="usernae">username</label>
+        <input
+          id="usernae"
+          type="text"
+          placeholder="username"
+          name="un"
+          required
+          minlength="2"
+          maxlength="10"
+        />
+      </p>
+      <p>
+        <label for="pw">password</label>
+        <input
+          id="pw"
+          type="password"
+          placeholder="password"
+          name="p"
+          required
+        />
+        <br />
+        <input type="email" required />
+        <br />
+        <input type="url" required />
+      </p>
+      <button type="submit">Register</button>
+    </form>
+    <hr />
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- op.gg 전적 검색 -->
+    <h1>op.gg 전적 검색</h1>
+    <form
+      id="dynamic-form"
+      action="https://www.op.gg/summoners/kr"
+      method="get"
+    >
+      <input
+        type="text"
+        id="summoner-name"
+        name="summoner"
+        placeholder="플레이어이름 + #KR1"
+      />
+      <button type="submit">전송</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("dynamic-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // 기본 제출 동작을 막음
+
+          var input = document.getElementById("summoner-name").value;
+          var sanitizedInput = input.replace(/#/g, "-"); // #를 -로 변환합니다.
+          var url =
+            "https://www.op.gg/summoners/kr/" +
+            encodeURIComponent(sanitizedInput);
+
+          // URL로 페이지 이동
+          window.location.href = url;
+        });
+    </script>
+  </body>
+</html>
