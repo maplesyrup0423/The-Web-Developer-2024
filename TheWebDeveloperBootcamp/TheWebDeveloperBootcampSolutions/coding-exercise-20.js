@@ -1,5 +1,6 @@
-// DON'T TOUCH THIS LINE! (please)
-const word = "skateboard"; //Don't change this line!
+// NO TOUCHING! (please)
+const die1 = Math.floor(Math.random() * 6) + 1; //random number from 1-6
+const die2 = Math.floor(Math.random() * 6) + 1; //random number from 1-6
 
 // YOUR CODE BELOW THIS LINE:
-let facialHair = word.slice(5).replace("o", "e");
+let roll = `${die1}과 ${die2}가 나왔습니다. 합계는 ${die1 + die2}입니다.`;
