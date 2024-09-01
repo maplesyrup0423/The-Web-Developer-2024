@@ -7,6 +7,8 @@ function getColor(phrase) {
     console.log("yellow");
   } else if (phrase === "go") {
     console.log("green");
+  } else {
+    console.log("purple");
   }
 
   //AND THIS LINE ↑↑↑↑↑
